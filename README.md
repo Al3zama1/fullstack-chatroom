@@ -26,3 +26,5 @@ process. This pipeline connects AWS to Docker Hub to automatically deploy the la
 AWS. Additionally, Slack is also included in the pipeline to automatically send 
 deployment update to a specified Slack channel. This pipeline takes place when the main github branch
 is updated.
+
+![alt text](https://github.com/stay-fcsd/fullstack-chatroom/blob/main/assets/pipeline.png "CI/CD pipelines")
