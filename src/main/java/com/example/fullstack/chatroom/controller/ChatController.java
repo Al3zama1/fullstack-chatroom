@@ -18,14 +18,12 @@ public class ChatController {
         this.simpMessagingTemplate = simpMessagingTemplate;
     }
 
-    // app/message
     @MessageMapping("/message")
     @SendTo("/chatroom/public")
     private Message receivePublicMessage(@Payload Message message) {
         return message;
     }
 
-    // /user/{userName}/private
     @MessageMapping("/private-message")
     private Message receivePrivateMessage(@Payload Message message) {
         simpMessagingTemplate
