@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   backend:
-    image: "al3zama/fullstack-chatroom:2"
+    image: "al3zama/fullstack-chatroom:24.10.2022.19.54.35"
     ports:
       - "80:8080"
     restart: "always"
