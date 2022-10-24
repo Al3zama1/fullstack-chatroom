@@ -73,7 +73,7 @@
                         <artifactId>frontend-maven-plugin</artifactId>
                         <version>1.12.1</version>
                         <configuration>
-                            <nodeVersion>v16.18.0</nodeVersion>
+                            <nodeVersion>v4.6.0</nodeVersion>
                             <workingDirectory>src/frontend</workingDirectory>
                         </configuration>
                         <executions>
@@ -83,8 +83,8 @@
                                     <goal>install-node-and-npm</goal>
                                 </goals>
                                 <configuration>
-                                    <nodeVersion>v16.18.0</nodeVersion>
-                                    <npmVersion>8.19.2</npmVersion>
+                                    <nodeVersion>v15.4.0</nodeVersion>
+                                    <npmVersion>7.3.0</npmVersion>
                                 </configuration>
                             </execution>
                             <execution>
