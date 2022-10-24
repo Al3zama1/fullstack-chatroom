@@ -10,9 +10,9 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class Message {
 
-    private String source;
-    private String destination;
-    private String content;
-    private LocalDateTime date;
+    private String senderName;
+    private String receiverName;
+    private String message;
+    private String date;
     private Status status;
 }

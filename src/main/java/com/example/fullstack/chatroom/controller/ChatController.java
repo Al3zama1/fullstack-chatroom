@@ -29,7 +29,7 @@ public class ChatController {
     @MessageMapping("/private-message")
     private Message receivePrivateMessage(@Payload Message message) {
         simpMessagingTemplate
-                .convertAndSendToUser(message.getSource(), "/private", message);
+                .convertAndSendToUser(message.getReceiverName(), "/private", message);
         return message;
     }
 }
