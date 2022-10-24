@@ -62,7 +62,7 @@
     </build>
     <profiles>
         <profile>
-            <id>build frontend</id>
+            <id>build-frontend</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
@@ -71,9 +71,11 @@
                     <plugin>
                         <groupId>com.github.eirslett</groupId>
                         <artifactId>frontend-maven-plugin</artifactId>
+                        <!-- Use the latest released version:
+                        https://repo1.maven.org/maven2/com/github/eirslett/frontend-maven-plugin/ -->
                         <version>1.12.1</version>
                         <configuration>
-                            <nodeVersion>v16.18.0</nodeVersion>
+                            <nodeVersion>v4.6.0</nodeVersion>
                             <workingDirectory>src/frontend</workingDirectory>
                         </configuration>
                         <executions>
@@ -83,8 +85,8 @@
                                     <goal>install-node-and-npm</goal>
                                 </goals>
                                 <configuration>
-                                    <nodeVersion>v16.18.0</nodeVersion>
-                                    <npmVersion>8.19.2</npmVersion>
+                                    <nodeVersion>v15.4.0</nodeVersion>
+                                    <npmVersion>7.3.0</npmVersion>
                                 </configuration>
                             </execution>
                             <execution>
@@ -108,9 +110,7 @@
                         </executions>
                     </plugin>
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-resources-plugin</artifactId>
-                        <version>3.2.0</version>
                         <executions>
                             <execution>
                                 <id>copy-build-folder</id>
@@ -123,6 +123,7 @@
                                         <resource>
                                             <directory>src/frontend/build</directory>
                                         </resource>
+
                                     </resources>
                                     <outputDirectory>${basedir}/target/classes/static</outputDirectory>
                                 </configuration>
